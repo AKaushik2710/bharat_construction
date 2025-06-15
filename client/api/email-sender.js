@@ -24,7 +24,8 @@ export default async function handler(req, res) {
       from: `"${name}" <${email}>`,
       to: process.env.RECEIVER_EMAIL, // Your email to receive messages
       subject,
-      text: message+contact
+      text: `Contact Number: ${contact}\n\n
+      ${message}`
     });
 
     return res.status(200).json({ message: 'Email sent successfully' });

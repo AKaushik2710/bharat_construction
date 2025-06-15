@@ -45,10 +45,13 @@ export default function Form(){
                 <Input label="name" holder="John Doe..." ref={nameRef} labelText="Name" cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs md:p-3 p-2 placeholder:text-cyan-100/25 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full"></Input>
             </Div>
             <Div cn=" md:h-2/3 grid items-center md:p-4 p-1">
-                <Input label="name" holder="example@gmail.com" ref={emailRef} labelText="E-mail" cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs placeholder:text-cyan-100/25 md:p-3 p-2 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full"></Input>
+                <Input label="name" holder="example@gmail.com" ref={emailRef} labelText="E-mail" type="email" cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs placeholder:text-cyan-100/25 md:p-3 p-2 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full"></Input>
             </Div>
             <Div cn=" md:h-2/3 grid items-center md:p-4 p-1">
-                <Input label="name" holder="12345 67890" ref={contactRef} labelText="Contact No." cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs placeholder:text-cyan-100/25 md:p-3 p-2 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full"></Input>
+                <Input label="name" holder="12345 67890" ref={contactRef} labelText="Contact No." type="number" cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs placeholder:text-cyan-100/25 md:p-3 p-2 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none" onInput={()=>{
+                    let val = contactRef.current.value.replace(/\D/g, "").slice(0, 10);
+    contactRef.current.value = val;
+                }}></Input>
             </Div>
             <Div cn=" md:h-2/3 grid items-center md:p-4 p-1">
                 <Input label="name" holder="Regarding Construction" ref={subjectRef} labelText="Subject" cnLabel="md:text-xl text-sm" cnInput="md:text-sm text-xs placeholder:text-cyan-100/25 md:p-3 p-2 rounded-sm border-1 border-white/25 caret-cyan-300 focus:outline-cyan-300 h-2/3 md:w-2/3 w-full"></Input>

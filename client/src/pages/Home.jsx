@@ -9,14 +9,16 @@ export default function Home(){
     <Div cn="font-display relative h-lvh w-screen overflow-y-auto overflow-x-hidden bg-black">
         <Header />
         <Div cn="h-5/10 md:h-9/10 w-full relative">
-            <Div cn="absolute top-10 left-5 md:left-10 jump transition-all duration-300 ease">
-                <Para cn="md:text-8xl text-2xl text-cyan-500">Water</Para>
+            <Div cn="absolute top-10 left-5 md:left-10 jump transition-all duration-300 ease flex">
+                <Para cn="md:text-8xl text-2xl mr-4 md:mr-12 bg-gradient-to-r from-cyan-500 to-black bg-clip-text text-transparent">You</Para>
+                <Para cn="md:text-8xl text-2xl bg-gradient-to-r from-black to-cyan-500 bg-clip-text text-transparent">Dream</Para>
             </Div>
-            <Div cn="absolute top-10 left-[30%] md:left-[30%] jump transition-all duration-300 ease">
+            {/* <Div cn="absolute top-10 left-[30%] md:left-[30%] jump transition-all duration-300 ease">
                 <Para cn="md:text-8xl text-2xl bg-gradient-to-r from-black to-cyan-500 bg-clip-text text-transparent">Treatment</Para>
-            </Div>
-            <Div cn="absolute top-10 left-[65%] md:left-[70%] jump transition-all duration-300 ease">
-                <Para cn="text-cyan-500 text-center md:text-8xl text-2xl ">Projects</Para>
+            </Div> */}
+            <Div cn="absolute top-10 left-[50%] md:left-[60%] jump transition-all duration-300 ease flex">
+                <Para cn="md:text-8xl text-2xl md:mr-12 mr-4 bg-gradient-to-r from-cyan-500 to-black bg-clip-text text-transparent">We</Para>
+                <Para cn="md:text-8xl text-2xl bg-gradient-to-r from-black to-cyan-500 bg-clip-text text-transparent">Construct</Para>
             </Div>
             <img className="h-full w-full object-fill" src="https://ptc-parforce.de/wp-content/uploads/klaeranlage-deutschland-abwasser-1024x685.jpg"></img>
         </Div>
