@@ -21,11 +21,12 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: process.env.GMAIL_USER,
       to: process.env.RECEIVER_EMAIL, // Your email to receive messages
       subject,
       text: `Contact Number: ${contact}\n\n
-      ${message}`
+      ${message}`,
+      replyTo: email
     });
 
     return res.status(200).json({ message: 'Email sent successfully' });
