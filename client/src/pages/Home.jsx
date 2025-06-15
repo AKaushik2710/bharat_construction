@@ -6,7 +6,7 @@ import '../index.css'
 
 export default function Home(){
     return <>
-    <Div cn="font-display relative h-lvh w-screen overflow-y-auto overflow-x-hidden bg-pink-300">
+    <Div cn="font-display relative h-lvh w-screen overflow-y-auto overflow-x-hidden bg-black">
         <Header />
         <Div cn="h-5/10 md:h-9/10 w-full relative">
             <Div cn="absolute top-10 left-5 md:left-10 jump transition-all duration-300 ease">
