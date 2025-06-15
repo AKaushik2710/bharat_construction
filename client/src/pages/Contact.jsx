@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import {Div, Para, Span, Input, Button, Header, Card, ProjectCard, Carousel, Footer, Form} from "../Components/Assembler";
 
 export default function Contact(){
+    
     return <Div cn="font-display relative h-lvh w-screen overflow-y-auto overflow-x-hidden bg-black">
             <Header />
             <Div cn="h-2/3 w-full flex md:justify-around justify-evenly bg-black text-white overflow-y-hidden">
