@@ -15,7 +15,7 @@ export default function Home(){
             <Div cn="absolute top-10 left-[30%] md:left-[30%] jump transition-all duration-300 ease">
                 <Para cn="md:text-8xl text-2xl bg-gradient-to-r from-black to-cyan-500 bg-clip-text text-transparent">Treatment</Para>
             </Div>
-            <Div cn="absolute top-10 left-[60%] md:left-[70%] jump transition-all duration-300 ease">
+            <Div cn="absolute top-10 left-[65%] md:left-[70%] jump transition-all duration-300 ease">
                 <Para cn="text-cyan-500 text-center md:text-8xl text-2xl ">Projects</Para>
             </Div>
             <img className="h-full w-full object-fill" src="https://ptc-parforce.de/wp-content/uploads/klaeranlage-deutschland-abwasser-1024x685.jpg"></img>
