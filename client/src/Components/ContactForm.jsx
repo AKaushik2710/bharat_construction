@@ -9,7 +9,6 @@ export default function Form(){
     const contactRef = useRef();
     const handleSubmit = async (e) => {
     e.preventDefault();
-    // setStatus('Sending...');
 
     try {
       const res = await fetch('/api/email-sender', {
@@ -25,17 +24,17 @@ export default function Form(){
       });
 
       if (res.ok) {
-        // setStatus('Email sent successfully!');
+        nameRef.current.value = '';
+        emailRef.current.value = '';
+        subjectRef.current.value = '';
+        messageRef.current.value = '';
+        contactRef.current.value = '';
         console.log('Email sent successfully!');
-        // setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        // const data = await res.json();
-        // setStatus(`Error: ${data.message}`);
         console.error('Error sending email:', res.statusText);
       }
     } catch (err) {
       console.error(err);
-    //   setStatus('Error sending email');
     }
   };
 
