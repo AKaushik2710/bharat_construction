@@ -1,0 +1,154 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&display=swap');
+@theme{
+    --font-display : "Signika", sans-serif; 
+    --font-title : "Caprasimo", serif;
+    --font-edu : "Edu VIC WA NT Hand Pre", cursive;
+}
+
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform : translateY(30%)
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInfinite {
+    0%{
+        transform: translateY(100%);
+    }
+
+    50%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes fadeOut {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes contact {
+    0%{
+        background-image: linear-gradient(to right, #ed6bff, #00d3f3, #fff);
+        background-clip: text;
+        color: transparent;
+    }
+
+    50%{
+        background-image: linear-gradient(to right, #fff, #ed6bff, #00d3f3);
+        background-clip: text;
+        color: transparent;
+    }
+
+    100%{
+        background-image: linear-gradient(to right, #00d3f3, #fff, #ed6bff);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform : rotate(180deg);
+    }
+    60%{
+        fill: white;
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes screw-step {
+  0%   { transform: rotate(0deg); }
+  80%  { transform: rotate(30deg); }
+  100% { transform: rotate(180deg); }
+}
+.animate-screw-step {
+  animation: screw-step 1s steps(1, end) infinite;
+}
+@keyframes rotationHalf {
+    0%{
+        transform: rotate(-230deg);
+    }
+    50%{
+        transform : rotate(-270deg);
+    }
+    100%{
+        transform: rotate(-230deg);
+    }
+}
+@keyframes Cone {
+    0%{
+        background-image: linear-gradient(to right, #ff6900, #fff, #ff6900);
+        background-clip: text;
+        color: transparent;
+    }
+    50%{
+        background-color: linear-gradient(to right, #fff, #ff6900, black);
+        background-clip: text;
+        color: transparent;
+    }
+    100%{
+        background-image: linear-gradient(to right, #ff6900, #fff, #ff6900);
+        background-clip: text;
+        color: transparent;
+    }
+}
+.font-display{
+    font-family: "Caprasimo", serif;
+}
+.rl{
+    writing-mode: vertical-lr;
+}
+.fadeIn{
+    animation: fadeIn 1s ease ;
+}
+.fadeInfinite{
+    animation: fadeInfinite 2s ease infinite;
+}
+.fadeOut{
+    animation: fadeOut 1s ease;
+}
+.jump{
+    animation: jump 2s ease infinite;
+}
+.contact{
+    animation: contact 0.5s linear infinite;
+}
+.rotation{
+    animation: rotation 2s linear infinite;
+}
+.rotateHalf{
+    animation: rotationHalf 1s linear infinite;
+}
+.trafficCone{
+    animation: Cone 0.5s linear infinite;
+}
